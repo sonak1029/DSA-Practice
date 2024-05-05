@@ -1,2 +1,2 @@
-# c-_study
+# DSA Practice
 A code repo for c++
