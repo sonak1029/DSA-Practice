@@ -4,7 +4,8 @@
 using namespace std;
 
 
-void printVector(vector<char> arr){
+void printVector(vector<string> arr){
+    cout <<"size : " <<arr.size() <<endl;
     // I have to two option to print the value Frist is this
     for(auto i: arr){
         cout <<i <<" ";
@@ -21,10 +22,42 @@ void printVector(vector<char> arr){
 int main(){
     // Demo Vector
 
+    vector<string> s;
+    s.push_back("Sonak");
+    s.push_back("Rupa");
+    s.push_back("vishal");
+    s.push_back("Raunak");
+    s.push_back("jon");
+
+    // How to check the size and capacity
+    cout <<"Size : " <<s.size() <<endl;
+    cout <<"Capacity : " <<s.capacity() <<endl;
+
+    // print vector
+    printVector(s);
+
+    // How to remove last element in the vector
+    s.pop_back();
+    printVector(s);
+
+    // using empty() Fucntion
+    // cout <<s.empty() <<endl; // vector is not empty ok
+
+    // we use begin() function
+    cout <<*s.begin() <<endl;
+
+    // we use end() function
+    cout <<*s.end() <<endl;
+
+    // cout <<s.front() <<endl;
+    // cout <<s.back() <<endl;
+
+
+
     vector<char> arr;
     // We check the size of vector
-    cout <<"The size of vector is : " <<arr.size() <<endl;
-    cout <<"The capacity of vector is : " <<arr.capacity() <<endl;
+    // cout <<"The size of vector is : " <<arr.size() <<endl;
+    // cout <<"The capacity of vector is : " <<arr.capacity() <<endl;
 
     // Now we are going to put the value in vector
     arr.push_back('A');
@@ -34,18 +67,18 @@ int main(){
     arr.push_back('E');
     arr.push_back('F');
 
-    cout <<endl <<"After we put the value in vector Now we are check the size and capacity of vector" <<endl <<endl;
-    cout <<"The size of vector is : " <<arr.size() <<endl;
-    cout <<"The capacity of vector is : " <<arr.capacity() <<endl;
+    // cout <<endl <<"After we put the value in vector Now we are check the size and capacity of vector" <<endl <<endl;
+    // cout <<"The size of vector is : " <<arr.size() <<endl;
+    // cout <<"The capacity of vector is : " <<arr.capacity() <<endl;
 
     // Now we are going to print the value
-    printVector(arr);
+    // printVector(arr);
 
     // how to remove the last element in this array
     arr.pop_back();
 
     // Now we are going to print the value
-    printVector(arr);
+    // printVector(arr);
 
     // We are using empty() fucntion return 1 if vector is empty otherwise return 0
     // cout <<arr.empty() <<endl;
@@ -62,17 +95,17 @@ int main(){
 
 
     // How to axis the frist value
-    cout <<"The Frist value is This : " <<arr.front() <<endl;
+    // cout <<"The Frist value is This : " <<arr.front() <<endl;
 
     // Now hwo to axis the last value
-    cout <<"And the Last value is This : " <<arr.back() <<endl;
+    // cout <<"And the Last value is This : " <<arr.back() <<endl;
 
     // how Insert() function work let's check
     arr.insert(arr.begin()+2, 'Z');
-    printVector(arr);
+    // printVector(arr);
 
     arr.erase(arr.begin()+2);
-    printVector(arr);
+    // printVector(arr);
 
 
     // Now how to swap a Number
