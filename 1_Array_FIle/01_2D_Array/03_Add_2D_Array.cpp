@@ -3,11 +3,23 @@
 
 using namespace std;
 
+
+void addTwoMatrix(int arr[][4], int row, int col){
+    for(int i=0; i<row; i++){
+        for(int j=0; j<col; j++){
+            cout <<arr[i][j] <<" ";
+        }cout <<endl;
+    }
+}
+
+
+
+
 int main(){
     int arr[3][4] = {
         {1, 2, 3, 4},
         {5, 6, 7, 8},
-        {9, 10, 11, 12},
+        {9, 10, 11, 1},
     };
 
     int sum = 0;
@@ -17,9 +29,11 @@ int main(){
     //     for(int j=0; j<4; j++){
     //         sum += arr[i][j];
     //     }
-    //     cout <<"The sum of Row is : " <<sum <<endl;
+    //     cout <<"The Sum of Row is : " <<sum <<endl;
     //     sum = 0;
     // }
+
+    // cout <<"The Sum of Row is : " <<sum <<endl;
 
 
 
@@ -29,9 +43,12 @@ int main(){
     //     for(int i=0; i<3; i++){
     //         sum += arr[i][j];
     //     }
-    //     cout <<"The sum of Column is : " <<sum <<endl;
+    //     cout <<"The Sum of columns is : " <<sum <<endl;
     //     sum = 0;
     // }
+
+
+    // cout <<"The Sum of columns is : " <<sum <<endl;
 
 
     // Add 2D Matrix
@@ -49,18 +66,34 @@ int main(){
 
     int ans[3][4];
 
+
+
+    cout <<"We are going to Add 2 Array and print the sum and this sum is based on Row" <<endl;
     for(int i=0; i<3; i++){
         for(int j=0; j<4; j++){
             ans[i][j] = arr1[i][j] + arr2[i][j];
         }
     }
 
+    // We going to print the matrix
+    // addTwoMatrix(ans, 3, 4);
 
-    for(int i=0; i<3; i++){
-        for(int j=0; j<4; j++){
+
+    // cout <<"We are going to Add 2 Array and print the sum and this sum is based on Column" <<endl;
+    // for(int j=0; j<4; j++){
+    //     for(int i=0; i<3; i++){
+    //         ans[i][j] = arr1[i][j] + arr2[i][j];
+    //     }
+    // }
+
+
+    // We going to print the matrix
+    for(int j=0; j<4; j++){
+        for(int i=0; i<3; i++){
             cout <<ans[i][j] <<" ";
         }cout <<endl;
     }
+    
 
     return 0;
 }
