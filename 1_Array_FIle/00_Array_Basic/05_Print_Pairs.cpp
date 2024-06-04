@@ -2,13 +2,6 @@
 using namespace std;
 
 
-// void print_Array(int *arr, int size){
-//     for(auto i=0; i<size; i++){
-//         cout <<arr[i] <<" ";
-//     }cout <<endl;
-// }
-
-
 void print_All_Pairs(int *arr, int size){
 
     // Print all the Element
@@ -18,8 +11,7 @@ void print_All_Pairs(int *arr, int size){
         for(int j=i+1; j<size; j++){
             int y = arr[j];
 
-            cout <<x <<" " <<y <<" is the Pair" <<endl;
-            
+            cout <<x <<" " <<y <<endl;
         }cout <<endl;
 
     }
