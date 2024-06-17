@@ -2,11 +2,12 @@
 #include<vector>
 using namespace std;
 
-
-// Prefix Sum Approch
+// The time complexcity of prifix sum is O(n) Time
+// Function to find the largest subarray sum using prefix sum approach
 int preFix_Sum(int *arr, int size){
     // prefix Sum
-    vector<int> prefix(size); // size ix 9
+    // Declare a vector to store prefix sums
+    vector<int> prefix(size);
     prefix = {0}; // Every Value is 0
     prefix[0] = arr[0]; // -2 store
 
@@ -29,8 +30,6 @@ int preFix_Sum(int *arr, int size){
     }
 
     return largest_Sum;
-
-
 
 }
 

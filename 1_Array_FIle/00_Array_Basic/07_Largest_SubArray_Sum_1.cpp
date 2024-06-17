@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// This Approach is The Brute Force O(n) Time
+// This Approach is The Brute Force O(n^3) Time
 
 int largest_Subarray_Sum(int *arr, int size){
 

@@ -2,21 +2,22 @@
 using namespace std;
 
 
-// Prefix Sum Approch
+// kadane's Algorithms
 int maximum_Subarray_Sum(int *arr, int size){
     int current_Sum = 0;
-    int largst_Sum = 0;
+    int largest_Sum = 0;
 
     for(int i=0; i<size; i++){
-        current_Sum = current_Sum + arr[i];
+        current_Sum = current_Sum + arr[i]; // 7+3 = 10
         if(current_Sum < 0){
-            current_Sum = 0;
+            current_Sum = 0; // current_Sum = 0 3 7 6 11 0 6 7 10
         }
 
-        largst_Sum = max(largst_Sum, current_Sum);
+        largest_Sum = max(current_Sum, largest_Sum); // largest_Sum = 0 3 7 11
+
     }
 
-    return largst_Sum;
+    return largest_Sum;
 
 }
 
