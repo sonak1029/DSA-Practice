@@ -25,7 +25,7 @@ int maximum_Subarray_Sum(int *arr, int size){
 
 
 int main(){
-    int arr[9] = {-2, 3, 4, -1, 5, -12, 6, 1, 3};
+    int arr[6] = {1, -2, 3, 4, 4, -2};
     int size = sizeof(arr) / sizeof(int);
     cout <<size <<endl;
 
