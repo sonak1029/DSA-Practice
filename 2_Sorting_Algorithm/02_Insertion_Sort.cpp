@@ -4,21 +4,23 @@ using namespace std;
 
 void insertion_Sort(int *arr, int size){
 
-    for(int i=1; i<=size-1; i++){ // 1<=8 2<=8 3<=8
+    // 5 4 3 2 1
+
+    for(int i=1; i<=size-1; i++){ // 1<=4 2<=4 3<=4
 
         // current stand for current_Element
-        int current = arr[i]; // 3 4 -1
+        int current = arr[i]; // 4 3 2
         // prev stand for Previous_Element
-        int prev = i - 1; // 3 - 1 = 2
+        int prev = i - 1; // 0 1 2
 
-        while(prev >= 0 && arr[prev] > current){ // 2>=0 && 4 > -1 yes
+        while(prev >= 0 && arr[prev] > current){ // 1>=0 && 4 > 2
 
-            arr[prev + 1] = arr[prev]; // 2+1 = 3
+            arr[prev + 1] = arr[prev]; // 3 4
             prev = prev - 1;
 
         }
 
-        arr[prev + 1] = current;  // 
+        arr[prev + 1] = current;  // 3 4
 
     }
 
