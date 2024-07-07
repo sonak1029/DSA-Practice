@@ -1,23 +1,30 @@
-#include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 
 using namespace std;
 
-void printVector(vector<pair<int, int> > arr){
-    for(auto x : arr){
-        cout <<x.first <<" " <<x.second <<endl;
-    }
+bool cmp(pair<int, int> a, pair<int, int> b){
+    
+    cout << "Comparing {" << a.first << ", " << a.second << "} and {" << b.first << ", " << b.second << "} -> ";
+    bool result = a.first == b.first ? a.second < b.second : a.first < b.first;
+    cout << (result ? "true" : "false") << endl;
+    return result;
 
 }
 
 int main(){
     vector<pair<int, int> > v = {
-        {1, 2},
         {3, 4},
-        {5, 6}
+        {2, 3},
+        {3, 7},
+        {1, 5},
+        {3, 4}
     };
 
-    printVector(v);
+    sort(v.begin(), v.end(), cmp);
+
+    for(auto x : v){
+        cout <<x.first <<" " <<x.second <<endl;
+    }
     
     return 0;
 }
