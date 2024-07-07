@@ -38,8 +38,5 @@ int main(){
     //     cout <<x.first <<" " <<x.second <<endl;
     // }
 
-
-    
-
     return 0;
 }
