@@ -20,13 +20,16 @@ int main(){
     m[1] = "Sonak";
     m[4] = "Rupa";
     m[6] = "Mohan";
+    m[3] = "Vishu";
     m.insert({2, "Amit"});
 
     m[5];
 
-    for(auto &x : m){
-        cout <<x.first <<" " <<x.second <<endl;
-    }cout <<endl;
+    printMap(m);
+
+    m.erase(3);
+
+    printMap(m);
 
     // Rool_No weight of student
     // map<long long int, long long int> person;
