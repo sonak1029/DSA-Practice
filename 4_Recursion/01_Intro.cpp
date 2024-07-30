@@ -1,17 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void fun(int n){
+int fun(int n){
+    static int x = 0;
     if(n>0){
-        fun(n-1);
-        cout <<n <<" " <<endl;
+        x++;
+        return fun(n-1)+x;
     }
+    return 0;
 }
 
 int main(){
-    int x = 3;
+    int x = 5;
 
-    fun(x);
+    cout <<fun(x) <<endl;
 
     return 0;
 }
