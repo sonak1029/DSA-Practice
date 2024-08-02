@@ -27,7 +27,7 @@ void fun1(int n){
 }
 
 
-// Tail Recursion
+// Head Recursion
 void fun2(int n){
     // Both condition Hold same Time Complexcity
       
@@ -45,10 +45,40 @@ void fun2(int n){
     }
 }
 
+
+// liner Recursion
+void fun3(int n){
+    // When a Function Call itself Only One Time That is Called Liner Recursion
+    // This condition Hold O(n) Time Complexcity
+    if(n > 0){
+        cout <<n <<" ";
+        fun3(n-1);
+        cout <<n;
+    }
+    cout <<endl;
+}
+
+
+
+// Tree Recursion
+void fun4(int n){
+    // When a Function Call itself More Then One Time That is Called Tree Recursion
+    // This condition Hold O(n) Time Complexcity
+    if(n > 0){
+        cout <<n <<" ";
+        fun4(n-1);
+        fun4(n-1);
+    }
+
+}
+
+
 int main(){
     int x = 5;
     // fun1(x);
-    fun2(x);
+    // fun2(x);
+    // fun3(x);
+    fun4(x);
 
     return 0;
 }
