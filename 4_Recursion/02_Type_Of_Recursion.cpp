@@ -73,12 +73,47 @@ void fun4(int n){
 }
 
 
+// Recursion Cycle
+// Call the Prototype of FunB(int n)
+void funB(int n);
+
+void funA(int n){
+    if(n > 0){
+        cout <<n <<" ";
+        funB(n-1);
+    }
+}
+
+
+void funB(int n){
+    if(n > 1){
+        cout <<n <<endl;
+        funA(n/2);
+    }
+}
+
+
+// Nested Recursion
+
+int fun5(int n){
+    if(n > 100){
+        cout <<n <<" " <<endl;
+        return n-10;
+    }else{
+        cout <<n <<endl;
+        return fun5(fun5(n+11));
+    }
+}
+
+
 int main(){
-    int x = 5;
+    int x = 95;
     // fun1(x);
     // fun2(x);
     // fun3(x);
-    fun4(x);
+    // fun4(x);
+    // funA(x);
+    cout <<fun5(x) <<endl;
 
     return 0;
 }
