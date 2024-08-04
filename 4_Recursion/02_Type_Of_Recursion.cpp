@@ -97,10 +97,8 @@ void funB(int n){
 
 int fun5(int n){
     if(n > 100){
-        cout <<n <<" " <<endl;
         return n-10;
     }else{
-        cout <<n <<endl;
         return fun5(fun5(n+11));
     }
 }
