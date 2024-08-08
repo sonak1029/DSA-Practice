@@ -13,7 +13,7 @@ int pow1(int m, int n){
 
 
 
-// Second One is this
+// This Function is Going to Reduce the Time Complexcity
 int pow2(int m, int n){
     if(n == 0){
         return 1;
