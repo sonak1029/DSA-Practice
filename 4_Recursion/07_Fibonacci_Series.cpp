@@ -66,7 +66,7 @@ int fib2(int n){
 
 
 int main(){
-    int n = 5;  // Change this to compute the Fibonacci number for any other value of n
+    int n = 7;  // Change this to compute the Fibonacci number for any other value of n
 
     initialize();  // Initialize the array f before calling fib2
 
