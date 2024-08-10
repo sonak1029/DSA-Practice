@@ -44,9 +44,9 @@ void initialize(){
     }
 }
 
-int fib2(int n){
+int fib2(int n){ // n=7
 
-    if(n <= 1){
+    if(n <= 1){ // 
         f[n] = n;
         return n;
     }else{
