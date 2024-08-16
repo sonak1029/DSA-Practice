@@ -50,13 +50,15 @@ int fib2(int n){ // n=7
         f[n] = n;
         return n;
     }else{
-        if(f[n-2] == -1){
+        if(f[n-2] == -1){ // f[7-2] = f[5] == -1
             f[n-2] = fib2(n-2);
         }
 
         if(f[n-1] == -1){
             f[n-1] = fib2(n-1);
         }
+
+        f[n] = f[n-2] + f[n-1];
 
         return f[n-2] + f[n-1];
         

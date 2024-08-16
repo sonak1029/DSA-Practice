@@ -6,6 +6,7 @@ using namespace std;
 // O(n squre) = Quadratic
 
 double e(int x, int n){
+
     static double p = 1, f = 1;
     double r;
 
@@ -18,6 +19,7 @@ double e(int x, int n){
     }
 
     return r + p/f;
+    
 }
 
 
