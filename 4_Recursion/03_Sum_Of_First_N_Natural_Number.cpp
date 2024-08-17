@@ -1,6 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+// Sum of Digits:
+
+// Write a recursive function to find the sum of the digits of a given number.
+// Example: sumOfDigits(123) should return 6.
+
+
 // This Condition is Based on Recursive Call
 // The Time complexcity Of this code is O(n) And Space Complexcity is O(n)
 int sum1(int n){

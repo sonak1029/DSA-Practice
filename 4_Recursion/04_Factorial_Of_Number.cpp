@@ -3,7 +3,7 @@ using namespace std;
 
 // In This Code We Are Going To Use Recursive Function
 int fact1(int n){
-    if(n == 0){
+    if(n == 1 || 0){
         return 1;
     }else{
         return fact1(n-1)*n;
@@ -25,7 +25,7 @@ int fact2(int n){
 
 
 int main(){
-    int factorial = 0;
+    int factorial = 5;
 
     cout <<fact1(factorial) <<endl;
     return 0;
