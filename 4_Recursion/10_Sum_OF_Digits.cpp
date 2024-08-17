@@ -1,8 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// This One is The First Option To Solve This Question
 
+// Sum of Digits:
+
+// Write a recursive function to find the sum of the digits of a given number.
+// Example: sumOfDigits(123) should return 6.
+
+
+// This One is The First Option To Solve This Question
 int sum_Of_Digits(int n){
     // Base Case : IF Number is 0 return 0
     if(n == 0){
@@ -31,10 +37,10 @@ int sum_Of_Digits1(int n){
 
 
 int  main(){
-    // Using Recursion To Solve This Question
+    // Using Recursion To Solve Sum Of Digits Question
     cout <<sum_Of_Digits(4321) <<endl;
 
-    // Using Loop To Solve This Question
+    // Using Loop To Solve Sum of Digits Question
     cout <<sum_Of_Digits1(4321) <<endl;
 
     return 0;
