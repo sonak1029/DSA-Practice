@@ -30,9 +30,9 @@ int pow2(int m, int n){
 int main(){
     // We Are Going To Calculate the Power Of (m)n
     int m = 2;
-    int n = 4;
+    int n = 9;
 
-    cout <<pow2(m, n) <<endl;
+    cout <<pow1(m, n) <<endl;
 
     return 0;
 }

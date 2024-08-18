@@ -20,9 +20,9 @@ int fib(int n){
 int fib1(int n){
     int term_0 = 0, term_1 = 1, sum;
     
-    if(n <= 1){
-        return n;
-    }
+    // if(n <= 1){
+    //     return n;
+    // }
 
     for(int i=2; i<=n; i++){
         sum = term_0 + term_1;
@@ -36,10 +36,10 @@ int fib1(int n){
 
 
 // This Memorization Recursion is the More Optimise Then The Excessive Recursion
-int f[10];
+int f[20];
 
 void initialize(){
-    for(int i = 0; i < 10; i++) {
+    for(int i = 0; i < 20; i++) {
         f[i] = -1;
     }
 }
@@ -68,10 +68,14 @@ int fib2(int n){ // n=7
 
 
 int main(){
-    int n = 7;  // Change this to compute the Fibonacci number for any other value of n
+    int n = 11;  // Change this to compute the Fibonacci number for any other value of n
 
     initialize();  // Initialize the array f before calling fib2
 
-    cout << "Fibonacci of " << n << " is: " << fib2(n) << endl;
+    cout <<"Fibonacci of " <<n <<" is : " <<fib(n) <<endl;
+
+    cout << "Fibonacci of " << n << " is : " << fib2(n) << endl;
+
+    cout <<"Fibnacci Of " <<n <<" is : " <<fib1(n) <<endl;
     return 0;
 }
