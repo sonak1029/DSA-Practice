@@ -30,12 +30,15 @@ void Append(struct Array *arr, int x){
 void Insert(struct Array *arr, int index, int x){
     
     if(index >= 0 && index <= arr->length){
-
+         // Shift elements to the right to make space
         for(int i=arr->length; i>index; i--){
             arr->A[i] = arr->A[i-1];
         }
 
+        // Insert the new element
         arr->A[index] = x;
+
+        // Increment the length
         arr->length++;
 
     }
@@ -48,7 +51,7 @@ int main(){
     struct Array arr = {{2, 3, 4, 5, 6}, 10, 5};
 
     // Call the Function
-    Insert(&arr, 5 ,25);
+    Insert(&arr, 2 ,25);
 
     // Call the Function
     // Append(&arr, 15);
