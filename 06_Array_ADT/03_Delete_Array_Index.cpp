@@ -50,7 +50,7 @@ int main(){
     struct Array arr = {{2, 6, 9, 5, 8}, 10, 5};
 
     // Call The Function
-    Delete(&arr, 3);
+    Delete(&arr, 2);
 
 
     // Print All the Value
