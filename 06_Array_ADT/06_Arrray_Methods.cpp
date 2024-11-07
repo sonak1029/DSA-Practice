@@ -16,7 +16,7 @@ int Get(struct Array *arr, int index){
         return arr->A[index];
     }
 
-    return -1;
+    return-1;
 
 }
 
