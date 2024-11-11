@@ -4,13 +4,13 @@ using namespace std;
 struct Array{
     int A[15];
     int size;
-    int lenght;
+    int length;
 };
 
 
 void Display_Array(struct Array *arr3){
     
-    for(int i=0; i<arr3->lenght; i++){
+    for(int i=0; i<arr3->length; i++){
         cout <<arr3->A[i] <<" ";
     }cout <<endl;
 
@@ -23,7 +23,7 @@ struct Array *Merging_Array(struct Array *arr1, struct Array *arr2){
 
     struct Array *arr3 = new Array;
 
-    while(i<arr1->lenght && j<arr2->lenght){
+    while(i<arr1->length && j<arr2->length){
 
         if(arr1->A[i] < arr2->A[j]){
             arr3->A[k++] = arr1->A[i++]; // Copy the smaller element from arr1 to arr3
@@ -34,17 +34,17 @@ struct Array *Merging_Array(struct Array *arr1, struct Array *arr2){
     }
 
     // Copy any remaining elements from arr1
-    for(; i<arr1->lenght; i++){
+    for(; i<arr1->length; i++){
         arr3->A[k++] = arr1->A[i];
     }
 
     // Copy any remaining elements from arr2
 
-    for(; j<arr2->lenght; j++){
+    for(; j<arr2->length; j++){
         arr3->A[k++] = arr2->A[j];
     }
 
-    arr3->lenght = arr1->lenght+arr2->lenght;
+    arr3->length = arr1->length+arr2->length;
     arr3->size = 10;
 
     return arr3;
