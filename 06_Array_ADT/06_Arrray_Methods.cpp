@@ -16,7 +16,7 @@ int Get(struct Array *arr, int index){
         return arr->A[index];
     }
 
-    return-1;
+    return -1;
 
 }
 
@@ -28,7 +28,7 @@ int Set(struct Array *arr, int index, int x){
         return arr->A[index] = x;
     }
 
-    return-1;
+    return -1;
 
 }
 
