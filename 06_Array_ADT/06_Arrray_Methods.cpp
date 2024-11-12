@@ -28,7 +28,7 @@ int Set(struct Array *arr, int index, int x){
         return arr->A[index] = x;
     }
 
-    return -1;
+    return-1;
 
 }
 
@@ -41,7 +41,7 @@ int Max(struct Array *arr){
     int Largest = arr->A[0];
 
     for(int i=1; i<arr->length; i++){
-        if(arr->A[i]> Largest){
+        if(arr->A[i] > Largest){
             Largest = arr->A[i];
         }
     }
@@ -104,13 +104,13 @@ int main(){
     cout <<"The Value is : " <<Get(&arr, 4) <<endl;
 
     // Call the Set() Function
-    cout <<"The value is : " <<Set(&arr, 6, 7) <<endl;
+    cout <<"The value is : " <<Set(&arr, 6, 13) <<endl;
 
     // Call the Max() Function
     cout <<"The Largest Value is : " <<Max(&arr) <<endl;
 
     // Call the Min() Function
-    cout <<"The Maximum Value is : " <<Min(&arr) <<endl;
+    cout <<"The Minimum Value is : " <<Min(&arr) <<endl;
 
     // Call the Sum() Function
     cout <<"The Sum of Array is : " <<Sum(&arr) <<endl;

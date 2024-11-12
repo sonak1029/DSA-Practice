@@ -17,8 +17,27 @@ void Display(struct Array *arr){
 
 
 
+// Delete A value in Sorted Array
+void Delete_Element(struct Array *arr, int index){
+
+    int x = 0;
+
+    if (index >= 0 && index < arr->length){
+        x = arr->A[index];
+        for(int i=index; i<arr->length; i++){
+            arr->A[i] = arr->A[i+1];
+        }
+    
+        arr->length--;
+    
+    }
+
+}
+
+
+
 // Insert A value in Sorted Array
-void Sorted_Array(struct Array *arr, int value){
+void Insert_Element(struct Array *arr, int value){
 
     int i = arr->length-1;
 
@@ -85,7 +104,10 @@ int main(){
     Display(&arr);
 
     // Call The Function
-    // Sorted_Array(&arr, 18);
+    // Insert_Element(&arr, 18);
+
+    // Call The Function Delete A value in sorted Array
+    Delete_Element(&arr, 3);
 
     // Check in Positive Number is Sorted Or Not
     // cout <<Algorithum_is_Sorted(&arr) <<endl;
