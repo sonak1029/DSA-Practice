@@ -28,10 +28,11 @@ void Append(struct Array *arr, int x){
 }
 
 
-// the insert() function takes an array, an index, and a value, and inserts the value at the specified index in the array, shifting the existing elements to the right
+// the insert() function takes an array, an index, and a value, 
+// and inserts the value at the specified index in the array, shifting the existing elements to the right
 void Insert(struct Array *arr, int index, int x){
     
-    if(index >= 0 && index <= arr->length){
+    if(index >= 0 && index < arr->length){
          // Shift elements to the right to make space
         for(int i=arr->length; i>index; i--){
             arr->A[i] = arr->A[i-1];
