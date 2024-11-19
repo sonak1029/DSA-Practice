@@ -5,7 +5,7 @@ using namespace std;
 // This Function will not Reduce the Time Complexcity And The Time Complexcity of This Code IS
 // O(n squre) = Quadratic
 
-double e(int x, int n){
+double taylor_Series(int x, int n){
 
     static double p = 1, f = 1;
     double r;
@@ -13,7 +13,7 @@ double e(int x, int n){
     if(n == 0){
         return 1;
     }else{
-        r = e(x, n-1);
+        r = taylor_Series(x, n-1);
         p = p * x;
         f = f * n;
     }
@@ -26,25 +26,25 @@ double e(int x, int n){
 // The Name Of the Taylor Series is Horner's Rule
 // Now This Function Will Reduce the Time complexcity 
 // O(n) = Linear
-double e1(int x, int n){
+double taylor_Horners_Rule(int x, int n){
     static double s = 1;
 
     if(n == 0){
         return s;
     }else{
-        s = 1 + x*s/n;
+        s = 1 + s*x/n;
     }
 
-    return e1(x, n-1);
+    return taylor_Horners_Rule(x, n-1);
 }
 
 
 // Now we Are going to solve the Question using loop
-double e2(int x, int n){
+double taylor_Series_Using_Loop(int x, int n){
     double s = 1;
     
     for(; n>0; n--){
-        s = 1 + x*s/n;
+        s = 1 + s*x/n;
     }
 
     return s;
@@ -52,7 +52,13 @@ double e2(int x, int n){
 }
 
 int main(){
-    // Taylor Series Question
-    cout <<e2(4, 10) <<endl;
+    // Taylor Series
+    cout <<taylor_Series(4, 11) <<endl;
+
+    // Taylor series using Horner's Rule
+    cout <<taylor_Horners_Rule(4, 11) <<endl;
+
+    // Taylor Series Using Loop
+    cout <<taylor_Series_Using_Loop(4, 11) <<endl;
     return 0;
 }

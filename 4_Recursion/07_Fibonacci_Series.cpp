@@ -36,31 +36,34 @@ int fib1(int n){
 
 
 // This Memorization Recursion is the More Optimise Then The Excessive Recursion
-int f[20];
+int arr[20];
 
 void initialize(){
     for(int i = 0; i < 20; i++) {
-        f[i] = -1;
+        arr[i] = -1;
     }
 }
 
-int fib2(int n){ // n=7
+int m_Fib2(int n){ // n=7
+    if (n >= 10) { // Handle overflow
+        return -1;
+    }
 
     if(n <= 1){ // 
-        f[n] = n;
+        arr[n] = n;
         return n;
     }else{
-        if(f[n-2] == -1){ // f[7-2] = f[5] == -1
-            f[n-2] = fib2(n-2);
+        if(arr[n-2] == -1){ // f[7-2] = f[5] == -1
+            arr[n-2] = m_Fib2(n-2);
         }
 
-        if(f[n-1] == -1){
-            f[n-1] = fib2(n-1);
+        if(arr[n-1] == -1){
+            arr[n-1] = m_Fib2(n-1);
         }
 
-        f[n] = f[n-2] + f[n-1];
+        arr[n] = arr[n-2] + arr[n-1];
 
-        return f[n-2] + f[n-1];
+        return arr[n-2] + arr[n-1];
         
     }
 }
@@ -68,14 +71,14 @@ int fib2(int n){ // n=7
 
 
 int main(){
-    int n = 11;  // Change this to compute the Fibonacci number for any other value of n
+    int n = 6;  // Change this to compute the Fibonacci number for any other value of n
 
     initialize();  // Initialize the array f before calling fib2
 
-    cout <<"Fibonacci of " <<n <<" is : " <<fib(n) <<endl;
+    cout <<"Fibonacci Series of " <<n <<" is : " <<fib(n) <<endl;
 
-    cout << "Fibonacci of " << n << " is : " << fib2(n) << endl;
+    cout << "Using Memoization The Fibonacci Series of " << n << " is : " << m_Fib2(n) << endl;
 
-    cout <<"Fibnacci Of " <<n <<" is : " <<fib1(n) <<endl;
+    cout <<"using Loop The Fibnacci Series Of " <<n <<" is : " <<fib1(n) <<endl;
     return 0;
 }
