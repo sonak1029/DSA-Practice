@@ -13,6 +13,7 @@ int fact(int n){
 
 int nCr(int n, int r){
     int numerator, Denominator;
+    if (r > n) return 0; // Base case: nCr is invalid if r > n
     numerator = fact(n);
     Denominator = fact(r) * fact(n-r);
 
